@@ -1,19 +1,82 @@
+@import './styles/variables.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--brat-color);
+
+}
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--spacing-xl);
   text-align: center;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  color: var(--text-color);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brat-color);
+}
+
+.projects-section {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.contact-section {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+  background-color: var(--background-color);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-md);
+  border: var(--border-width-lg) solid var(--secondary-color);
+  box-shadow: 20px 16px 0px 0px var(--shadow-color);
+  transition: all var(--transition-normal);
+  width: 90vh;
+  height: 50%;
+}
+
+.contact-section:hover {
+  transform: translateY(-18px);
+  transform: scale(1.05);
+  box-shadow: 25px 20px 0px 0px var(--shadow-color-hover);
+  border-color: var(--primary-color);
+  box-shadow: 0px 0px 0px 0px var(--shadow-color);
+}
+
+.bio-section {
+  width: 200vh;
+  height: 50%;
 }
 
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter var(--transition-normal);
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -34,9 +97,38 @@
 }
 
 .card {
-  padding: 2em;
+  padding: var(--spacing-xl);
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
+}
+
+h2, h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.bio-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.projects-section {
+  width: 100%;
+  max-width: 800px;
+}
+
+.project-block {
+  margin-bottom: var(--spacing-xl);
 }
