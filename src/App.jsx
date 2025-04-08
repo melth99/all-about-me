@@ -6,7 +6,7 @@ import ShowAndTell from './components/ShowAndTell/ShowAndTell'
 import ContactMe from './components/ContactMe/ContactMe'
 import gamepic from './images/gamepic.png'
 import cryptopic from './images/cryptopic.png'
-import cryptogif from './images/crypto.gif'
+import cryptocoin from './images/crypto-currency-coin.png'
 
 
 
@@ -33,7 +33,7 @@ function App() {
     title: "MyCryptoHaven",
     description: "A crypto tracker",
     bullets: ["A crypto tracker", "A crypto tracker", "A crypto tracker"],
-    imgs: [cryptopic, cryptogif],
+    imgs: [cryptopic, cryptocoin],
     links: { github: "https://github.com/meleyhaddis/sanrio-crypto-friends", live: "https://mycryptohaven.netlify.app/" }
   }
 

@@ -15,6 +15,7 @@ body {
 }
 #root {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: var(--spacing-xl);
   text-align: center;
@@ -33,6 +34,7 @@ body {
 
 .projects-section {
   display: flex;
+  width: 100%;
   gap: var(--spacing-xl);
   align-items: center;
 }
@@ -74,21 +76,14 @@ body {
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--brat-color));
 }
 
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em black);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {

@@ -1,7 +1,7 @@
-
 import { useState } from 'react';
+import './ContactMe.css';
 import github from '../../images/github.png';
-import linkedin from '../../images/linkedin-icon.png';
+import linkedin from '../../images/linkedin-logo.png';
 
 export default function ContactMe() {
     const [isHovered, setIsHovered] = useState(false);
@@ -11,14 +11,25 @@ export default function ContactMe() {
     };
 
     return (
-        <div>
-            <h1>Contact Me</h1>
-            <p>Email: meleyhaddis@gmail.com</p>
-            <p>Phone: 301-706-9898</p>
-            <a href="www.linkedin.com/in/meley-haddis">LinkedIn</a>
-            <img className="icon" src={github} alt="github" />
-            <a href="https://github.com/melth99">Github</a>
-            <img className="icon" src={linkedin} alt="linkedin" />
+        <div className="contact-container">
+            <h1 className="contact-title">Contact Me</h1>
+            
+            <div className="contact-info">
+                <p className="contact-item">Email: meleyhaddis@gmail.com</p>
+                <p className="contact-item">Phone: 301-706-9898</p>
+            </div>
+            
+            <div className="social-links">
+                <a href="https://github.com/melth99" className="social-link" target="_blank" rel="noopener noreferrer">
+                    <img className="logo" src={github} alt="GitHub" />
+                    <span>GitHub</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/meley-haddis" className="social-link" target="_blank" rel="noopener noreferrer">
+                    <img className="logo" src={linkedin} alt="LinkedIn" />
+                    <span>LinkedIn</span>
+                </a>
+            </div>
         </div>
     )
 }
