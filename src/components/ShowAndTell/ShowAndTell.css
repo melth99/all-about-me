@@ -2,23 +2,33 @@
 
 .show-and-tell {
     background-color: var(--background-color);
-    padding: var(--spacing-sm);
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius-lg);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
     border: var(--border-width-lg) solid var(--secondary-color);
     box-shadow: 20px 16px 0px 0px var(--shadow-color);
     transition: all var(--transition-normal);
-    width: 50%;
-    height: 50%;
+    flex-basis: calc(50% - (var(--spacing-xl) / 2));
+    flex-grow: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 /* Add hover effect to trigger the transition */
 .show-and-tell:hover {
-    transform: translateY(-18px);
-    transform: scale(1.05);
+    transform: translateY(-18px) scale(1.05);
     box-shadow: 25px 20px 0px 0px var(--shadow-color-hover);
     border-color: var(--primary-color);
-    box-shadow: 0px 0px 0px 0px var(--shadow-color);
+}
+
+.project-title {
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+    text-align: center;
 }
 
 .project-links {
@@ -27,6 +37,42 @@
     gap: var(--spacing-xl);
     margin-top: var(--spacing-lg);
     width: 100%;
+}
+.bullets {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: var(--spacing-sm);
+}
+
+.bullet-point {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: transform var(--transition-normal);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-sm);
+    --bullet-image: url('../../images/github.png');
+    font-size: var(--font-size-md);
+}
+
+.bullet-point:hover {
+    transform: scale(1.05);
+    background-color: var(--background-color-hover);
+}
+
+.bullet-point::before {
+    content: "";
+    width: 3vh;
+    height: 3vh;
+    min-width: 3vh;
+    min-height: 3vh;
+    background-image: var(--bullet-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .project-link {
@@ -61,17 +107,11 @@
     margin-top: var(--spacing-xs);
 }
 
-.project-title {
-    font-size: var(--font-size-2xl);
-    font-weight: bold;
-    margin-bottom: var(--spacing-md);
-    color: var(--text-color);
-}
-
 .project-description {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     margin-bottom: var(--spacing-md);
     color: var(--text-color);
+    line-height: 1.5;
 }
 
 .project-image {
@@ -82,11 +122,9 @@
 
 .img-title-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.bullets {
+    width: 100%;
     margin-bottom: var(--spacing-md);
 }
 
@@ -110,3 +148,7 @@
     text-decoration: underline;
 }   
 
+.project-image {
+    border-radius: var(--border-radius-lg);
+    border: var(--border-width-lg) solid var(--secondary-color);
+}

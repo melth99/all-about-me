@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--brat-color);
-
 }
+
 .header-section {
   display: flex;
   flex-direction: column;
@@ -13,8 +13,9 @@ body {
   justify-content: center;
   height: 100vh;
 }
+
 #root {
-  max-width: 1280px;
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   padding: var(--spacing-xl);
@@ -28,19 +29,23 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
-  background-color: var(--brat-color);
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .projects-section {
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-xl);
-  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: var(--spacing-xl);
+  padding: 0 var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .contact-section {
-  margin-bottom: var(--spacing-xl);
   display: flex;
   gap: var(--spacing-xl);
   align-items: center;
@@ -51,21 +56,20 @@ body {
   border: var(--border-width-lg) solid var(--secondary-color);
   box-shadow: 20px 16px 0px 0px var(--shadow-color);
   transition: all var(--transition-normal);
-  width: 90vh;
-  height: 50%;
+  width: 90%;
+  max-width: 800px;
 }
 
 .contact-section:hover {
-  transform: translateY(-18px);
-  transform: scale(1.05);
+  transform: translateY(-10px) scale(1.03);
   box-shadow: 25px 20px 0px 0px var(--shadow-color-hover);
   border-color: var(--primary-color);
-  box-shadow: 0px 0px 0px 0px var(--shadow-color);
 }
 
 .bio-section {
-  width: 200vh;
-  height: 50%;
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: var(--spacing-xl);
 }
 
 .logo {
@@ -83,8 +87,6 @@ body {
   filter: drop-shadow(0 0 2em black);
 }
 
-
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -99,12 +101,6 @@ body {
   color: #888;
 }
 
-.app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 h1 {
   font-size: var(--font-size-3xl);
   margin-bottom: var(--spacing-md);
@@ -113,15 +109,6 @@ h1 {
 h2, h3 {
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-md);
-}
-
-.bio-section {
-  margin-bottom: var(--spacing-xl);
-}
-
-.projects-section {
-  width: 100%;
-  max-width: 800px;
 }
 
 .project-block {

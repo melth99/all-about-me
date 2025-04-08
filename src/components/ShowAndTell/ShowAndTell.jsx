@@ -12,43 +12,37 @@ export default function ShowAndTell({ show }) {
             <div className="img-title-container">
                 <h2 className="project-title">{show.title}</h2>
 
-                {show.imgs && show.imgs.length > 0 && (
-                    <div className="project-image">
-                        <img 
-                            src={show.imgs[1]} 
-                            alt={`${show.title} screenshot`} 
-                            style={{ maxWidth: '100%', height: 'auto' }} 
-                            onError={(e) => {
-                                console.error("Image failed to load:", e.target.src);
-                                e.target.style.display = 'none';
-                            }}
-                        />
-                    </div>
-                )}
+    
             </div>
             
             <p className="project-description">{show.description}</p>
 
             <div className="bullets">
+                <ul className="bullet-points"
+                style={{ listStyleImage: `url(${show.imgs[1]})` }}>
+             
                 {show.bullets.map((bullet, index) => (
-                    <div className="bullet" key={index}>
-                        <p>{bullet}</p>
+                    <div className="bullet-point" key={index} style={{ 
+                        "--bullet-image": `url(${show.imgs[1]})` 
+                    }}>
+                        {bullet}
                     </div>
                 ))}
+                </ul>
             </div>
 
             {show.imgs && show.imgs.length > 1 && (
-                <div className="project-sprite">
-                    <img
+
+                    <img className="project-image"
                         src={show.imgs[0]}
                         alt={`${show.title} screenshot 2`}
-                        style={{ maxWidth: '100%', height: 'auto' }}
+                        style={{ maxWidth: '60%', height: 'auto' }}
                         onError={(e) => {
                             console.error("Image failed to load:", e.target.src);
                             e.target.style.display = 'none';
                         }}
                     />
-                </div>
+
             )}
 
             <div className="project-links">
