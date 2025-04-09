@@ -7,13 +7,13 @@ import ContactMe from './components/ContactMe/ContactMe'
 import ThisPortfolio from './components/ThisPortfolio/ThisPortfolio'
 
 // Image paths
-const gamepic = '/all-about-me/images/gamepic.png'
-const cryptopic = '/all-about-me/images/cryptopic.png'
-const cryptocoin = '/all-about-me/images/crypto-currency-coin.png'
-const jinx = '/all-about-me/images/jinxsprite.png'
-const leagueImg = '/all-about-me/images/lolteamspic.png'
-const chat = '/all-about-me/images/chat-bubble.jpg'
-const gitCentralPic = '/all-about-me/images/gitcentralpic.png'
+const gamepic = '/all-about-me/gamepic.png'
+const cryptopic = '/all-about-me/cryptopic.png'
+const cryptocoin = '/all-about-me/crypto-currency-coin.png'
+const jinx = '/all-about-me/jinxsprite.png'
+const leagueImg = '/all-about-me/lolteamspic.png'
+const chat = '/all-about-me/chat-bubble.jpg'
+const gitCentralPic = '/all-about-me/gitcentralpic.png'
 
 function App() {
   const [show, setShow] = useState([

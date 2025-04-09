@@ -1,7 +1,7 @@
 import './Bio.css';
 
 // Image paths
-const meley = '/all-about-me/images/Meley.png';
+const meley = '/all-about-me/Meley.png';
 
 function Bio() {
     return (

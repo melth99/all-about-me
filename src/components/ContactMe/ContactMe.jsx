@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './ContactMe.css';
 
 // Image paths
-const github = '/all-about-me/images/github.png';
-const linkedin = '/all-about-me/images/linkedin-logo.png';
+const github = '/all-about-me/github.png';
+const linkedin = '/all-about-me/linkedin-logo.png';
 
 export default function ContactMe() {
     const [isHovered, setIsHovered] = useState(false);
