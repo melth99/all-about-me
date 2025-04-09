@@ -7,18 +7,16 @@
     } */
 
 .contact-container {
-  display: flex;
+  display: flex;  
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-md);
-  background-color: var(--background-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  padding: var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   margin-left: auto;
   margin-right: auto;
-  max-height: 140vh;
+  height: 100%;
+  width: 100%;
 }
 
 .contact-container:hover {
@@ -48,11 +46,11 @@
 
 .social-links {
   display: flex;
-
   gap: var(--spacing-xl);
   margin-top: var(--spacing-lg);
   width: 100%;
-}
+  justify-content: space-around;
+  flex-direction: row;
 
 .social-link {
   display: flex;

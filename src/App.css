@@ -43,6 +43,7 @@ body {
   width: 100%;
   z-index: 1; /* Lower z-index so content appears over it */
   background-color: var(--brat-color); /* Match body background */
+  position: relative; /* For absolute positioning of scroll-down */
 }
 
 .header-section h1 {
@@ -54,21 +55,23 @@ body {
 
 /* Content sections with parallax effect */
 .bio-section {
-  width: 200vh;
+  width: 100%;
   height: 50%;
   position: relative;
   z-index: 2; /* Higher z-index to appear over header */
-  margin-top: 100vh; /* Push content down to start after header */
-  background-color: var(--brat-color);
+  margin-top: 10vh; /* Push content down to start after header */
   padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
 }
+
+
 
 .contact-section {
   margin-bottom: var(--spacing-xl);
   display: flex;
   gap: var(--spacing-xl);
   align-items: center;
-  background-color: var(--background-color);
   padding: var(--spacing-sm);
   border-radius: var(--border-radius-lg);
   margin-bottom: var(--spacing-md);
@@ -79,7 +82,13 @@ body {
   height: 50%;
   position: relative;
   z-index: 2; /* Higher z-index to appear over header */
-  background-color: var(--brat-color);
+  background-color: whitesmoke;
+}
+
+.contact-section:hover {
+  transform: translateY(-18px) scale(1.05);
+  box-shadow: 25px 20px 0px 0px var(--shadow-color-hover);
+  border-color: var(--primary-color);
 }
 
 .projects-section {
@@ -142,6 +151,8 @@ h2, h3 {
   margin-bottom: var(--spacing-md);
 }
 
+
+
 .projects-section {
     display: flex
 ;
@@ -156,4 +167,40 @@ h2, h3 {
     align-items: center;
     align-content: center;
     flex-direction: row;
+}
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.header-section h1 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  color: black;
+  position: static;
+
+}
+.scroll-down {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  margin: 0;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }

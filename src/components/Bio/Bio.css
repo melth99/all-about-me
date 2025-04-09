@@ -2,20 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   padding: var(--spacing-lg);
   background-color: var(--background-color);
-  border-radius: var(--border-radius);
+  border-radius: 2rem;
   box-shadow: var(--box-shadow);
   margin-bottom: var(--spacing-xl);
+  border: var(--border-width-lg) solid var(--secondary-color);
+  box-shadow: 20px 16px 0px 0px var(--shadow-color);
+  transition: all var(--transition-normal);
 }
 
-.profile-image {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 50%; 
-  box-shadow: var(--box-shadow);
-  
+.bio-container:hover {
+  transform: translateY(-18px);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
 }
 
 .bio-header {
@@ -41,9 +42,10 @@
 .profile-image {
   width: 100%;
   max-width: 300px;
-  border-radius: var(--border-radius);
+  border-radius: 50%; /* Changed to 50% for a circular image */
   box-shadow: var(--box-shadow);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  object-fit: cover; /* Ensure the image covers the area properly */
 }
 
 .profile-image:hover {

@@ -12,8 +12,6 @@ import leagueImg from './images/lolteamspic.png'
 import chat from './images/chat-bubble.jpg'
 import gitCentralPic from './images/gitcentralpic.png'
 
-
-
 function App() {
   const [show, setShow] = useState([
     {
@@ -65,25 +63,23 @@ function App() {
     <div className="app-container">
       <div className="header-section">
         <h1>meley</h1>
-
+        <p className="scroll-down"> Scroll ↓</p>
       </div>
+      <div className="content-scroll-down">
+        <div className="bio-section">
+          <Bio />
+        </div>
 
-      <div className="bio-section">
-        <Bio />
-      </div>
+        <div className="contact-section">
+          <ContactMe />
+        </div>
 
-      <div className="contact-section">
-        <ContactMe />
-      </div>
-
-
-
-      <div className="projects-section">
-
-        <ShowAndTell show={pokeWordle} />
-        <ShowAndTell show={crypto} />
-        <ShowAndTell show={league} />
-        <ShowAndTell show={gitCentral} />
+        <div className="projects-section">
+          <ShowAndTell show={pokeWordle} />
+          <ShowAndTell show={crypto} />
+          <ShowAndTell show={league} />
+          <ShowAndTell show={gitCentral} />
+        </div>
       </div>
     </div>
   )
