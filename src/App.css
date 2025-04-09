@@ -16,7 +16,7 @@ body {
   text-align: center;
   font-family: 'Arial Narrow', Arial, sans-serif;
   color: var(--text-color);
-  transform: scale(0.85);
+  transform: scale(0.75);
   transform-origin: top center;
 }
 
@@ -37,12 +37,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 115vh;
+  height: 126vh;
   width: 100%;
   background-color: var(--brat-color);
   position: relative;
   z-index: 1;
-
 }
 
 .header-section h1 {
@@ -61,7 +60,6 @@ body {
   animation: bounce 2s infinite;
 }
 
-
 /* Content sections */
 .bio-section {
   width: 150vh;
@@ -70,27 +68,25 @@ body {
   margin-bottom: var(--spacing-xl);
 }
 
-.contact-section
-{
-margin-bottom: var(--spacing-xl);
-display: flex;
-gap: var(--spacing-xl);
-align-items: center;
-background-color: var(--background-color);
-padding: var(--spacing-sm);
-border-radius: var(--border-radius-lg);
-margin-bottom: var(--spacing-md);
-border: var(--border-width-lg) solid var(--secondary-color);
-box-shadow: 20px 16px 0px 0px var(--shadow-color);
-transition: all var(--transition-normal);
-width: 90vh;
-height: 50%;
-background-color: whitesmoke;
+.contact-section {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+  background-color: var(--background-color);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-md);
+  border: var(--border-width-lg) solid var(--secondary-color);
+  box-shadow: 20px 16px 0px 0px var(--shadow-color);
+  transition: all var(--transition-normal);
+  width: 90vh;
+  height: 50%;
+  background-color: whitesmoke;
 }
 
 .this-portfolio {
   background-color: whitesmoke;
-
   border-radius: var(--border-radius-lg);
   margin-bottom: var(--spacing-md);
   border: var(--border-width-lg) solid var(--secondary-color);
@@ -98,7 +94,6 @@ background-color: whitesmoke;
   transition: all var(--transition-normal);
   width: 90vh;
 }
-
 
 .contact-section:hover,
 .this-portfolio:hover {
@@ -146,7 +141,6 @@ background-color: whitesmoke;
 }
 
 .bio-text-list {
-
   padding: 0;
   margin: 0;
   justify-content: center;
@@ -167,7 +161,6 @@ h3 {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
