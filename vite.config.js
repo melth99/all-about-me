@@ -10,9 +10,9 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
-      output: {
-        manualChunks: undefined
-      }
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
     }
   },
   resolve: {
@@ -20,5 +20,6 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
-  publicDir: 'public'
+  publicDir: 'public',
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.gif', '**/*.ico']
 })
