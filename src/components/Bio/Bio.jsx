@@ -1,18 +1,12 @@
-/* 
-what I want in the about me:
-    - College
-    - fun facts
-    - professional pic of me
- */
-
-import meley from '../../images/Meley.png';
 import './Bio.css';
+
+// Image paths
+const meley = '/all-about-me/images/Meley.png';
 
 function Bio() {
     return (
         <div className="bio-container">
             <div className="bio-header">
-
                 <h1>meley haddis</h1>
                 <p>Pronunciation: 'Mel-aye Had-dis'</p>
             </div>
@@ -34,7 +28,6 @@ function Bio() {
                         <li>Front-End Development</li>
                         <li>Finance</li>
                         <li>Electric Vehicles</li>
-
                     </ul>
 
                     <p>
@@ -43,7 +36,6 @@ function Bio() {
                         I am a bootcamp graduate with a technical background and have been developing fullstack applications, specifically using Python, Node, Django, React, and PostgreSQL, and React.js. In addition to my developer skills, I enjoyed the hands-on experience of contributing to a rapidly evolving field and am now eager to explore similar opportunities in a new industry.
 
                         Uncountable would be a perfect fit for me, due to my technical experience and degree in Materials Science.
-
                     </p>
 
                     {/* <div className="resume-section">
