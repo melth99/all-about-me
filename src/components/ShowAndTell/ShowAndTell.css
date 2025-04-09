@@ -2,15 +2,15 @@
 
 .show-and-tell {
     background-color: var(--background-color);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm);
     border-radius: var(--border-radius-lg);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
     border: var(--border-width-lg) solid var(--secondary-color);
     box-shadow: 20px 16px 0px 0px var(--shadow-color);
     transition: all var(--transition-normal);
     flex-basis: calc(50% - (var(--spacing-xl) / 2));
     flex-grow: 1;
-    min-width: 300px;
+    min-width: 52vh;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;

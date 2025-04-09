@@ -26,21 +26,26 @@
 
 .bio-content {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: var(--spacing-xl);
+  align-items: center;
   width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .bio-image {
   flex: 0 0 300px;
+  padding: var(--spacing-md);
+  justify-content: top;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+
+
 }
 
 .profile-image {
   width: 100%;
+  justify-content: center;
+  border: var(--border-width-lg) solid var(--secondary-color);
   max-width: 300px;
   border-radius: 50%; /* Changed to 50% for a circular image */
   box-shadow: var(--box-shadow);

@@ -4,7 +4,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--brat-color);
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #root {
@@ -15,7 +16,8 @@ body {
   text-align: center;
   font-family: 'Arial Narrow', Arial, sans-serif;
   color: var(--text-color);
-  position: relative; /* For z-index stacking context */
+  transform: scale(0.85);
+  transform-origin: top center;
 }
 
 .app-container {
@@ -23,55 +25,58 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
   background-color: var(--brat-color);
   max-width: 1600px;
   margin: 0 auto;
-  position: relative; /* For z-index stacking context */
+  z-index: 1;
 }
 
-/* Header section with parallax effect */
+/* Header section */
 .header-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  position: fixed; /* Fixed position for parallax */
-  top: 0;
-  left: 0;
+  height: 115vh;
   width: 100%;
-  z-index: 1; /* Lower z-index so content appears over it */
-  background-color: var(--brat-color); /* Match body background */
-  position: relative; /* For absolute positioning of scroll-down */
+  background-color: var(--brat-color);
+  position: relative;
+  z-index: 1;
+
 }
 
 .header-section h1 {
   font-size: 5rem;
   margin-bottom: 0;
   color: black;
-  position: static;
 }
 
-/* Content sections with parallax effect */
+.scroll-down {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  margin: 0;
+  animation: bounce 2s infinite;
+}
+
+
+/* Content sections */
 .bio-section {
-  width: 100%;
+  width: 200vh;
   height: 50%;
-  position: relative;
-  z-index: 2; /* Higher z-index to appear over header */
-  margin-top: 10vh; /* Push content down to start after header */
+  background-color: var(--brat-color);
   padding: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
-  border-radius: var(--border-radius-lg);
 }
-
-
 
 .contact-section {
   margin-bottom: var(--spacing-xl);
   display: flex;
   gap: var(--spacing-xl);
   align-items: center;
+  background-color: var(--background-color);
   padding: var(--spacing-sm);
   border-radius: var(--border-radius-lg);
   margin-bottom: var(--spacing-md);
@@ -80,8 +85,6 @@ body {
   transition: all var(--transition-normal);
   width: 90vh;
   height: 50%;
-  position: relative;
-  z-index: 2; /* Higher z-index to appear over header */
   background-color: whitesmoke;
 }
 
@@ -97,15 +100,13 @@ body {
   justify-content: space-around;
   gap: var(--spacing-xl);
   width: 100%;
-  max-width: 1200px;
+  max-width: 130vh;
   margin-top: var(--spacing-xl);
   padding: 0 var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
   align-items: center;
   align-content: center;
   flex-direction: row;
-  position: relative;
-  z-index: 2; /* Higher z-index to appear over header */
   background-color: var(--brat-color);
 }
 
@@ -138,59 +139,9 @@ body {
   color: #888;
 }
 
-/* Remove the general h1 rule if .header-section h1 is the only h1 */
-/* 
-h1 {
-  font-size: var(--font-size-3xl);
-  margin-bottom: var(--spacing-md);
-}
-*/
-
 h2, h3 {
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-md);
-}
-
-
-
-.projects-section {
-    display: flex
-;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: var(--spacing-xl);
-    width: 100%;
-    max-width: 1200px;
-    margin-top: var(--spacing-xl);
-    padding: 0 var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-}
-.header-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.header-section h1 {
-  font-size: 5rem;
-  margin-bottom: 0;
-  color: black;
-  position: static;
-
-}
-.scroll-down {
-  font-size: 1.5rem;
-  color: black;
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  margin: 0;
-  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {

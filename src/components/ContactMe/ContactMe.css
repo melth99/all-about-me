@@ -15,8 +15,10 @@
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
-  width: 100%;
+  color: black;
+  width: 60%;
+  height: 60
+
 }
 
 .contact-container:hover {
@@ -34,6 +36,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: var(--font-size-2xl);
   width: 100%;
   margin-bottom: var(--spacing-md);
 }

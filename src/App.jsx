@@ -12,6 +12,8 @@ import leagueImg from './images/lolteamspic.png'
 import chat from './images/chat-bubble.jpg'
 import gitCentralPic from './images/gitcentralpic.png'
 
+
+
 function App() {
   const [show, setShow] = useState([
     {
@@ -52,6 +54,10 @@ function App() {
     links: { github: "https://github.com/melth99/lol_project", live: "https://lol-teams-app-b552da9dd887.herokuapp.com/" }
   }
 
+  const allAboutMe = {
+    
+  }
+
   const gitCentral = {
     title: "Git Central",
     description: "A reddit-inspired full-stack forum platform where users can create, discuss, and engage with topics via a forum. It provides a centralized platform to view, update, and delete repositories, as well as to create new ones.",
@@ -66,15 +72,15 @@ function App() {
         <p className="scroll-down"> Scroll ↓</p>
       </div>
 
-        <div className="bio-section">
+        <div className="bio-section" id="scroll-down1">
           <Bio />
         </div>
 
-        <div className="contact-section">
+        <div className="contact-section" id="scroll-down2">
           <ContactMe />
         </div>
 
-        <div className="projects-section">
+        <div className="projects-section" id="scroll-down3">
           <ShowAndTell show={pokeWordle} />
           <ShowAndTell show={crypto} />
           <ShowAndTell show={league} />
