@@ -6,14 +6,14 @@ import ShowAndTell from './components/ShowAndTell/ShowAndTell'
 import ContactMe from './components/ContactMe/ContactMe'
 import ThisPortfolio from './components/ThisPortfolio/ThisPortfolio'
 
-// Import images using new URL approach
-const gamepic = new URL('./images/gamepic.png', import.meta.url).href
-const cryptopic = new URL('./images/cryptopic.png', import.meta.url).href
-const cryptocoin = new URL('./images/crypto-currency-coin.png', import.meta.url).href
-const jinx = new URL('./images/jinxsprite.png', import.meta.url).href
-const leagueImg = new URL('./images/lolteamspic.png', import.meta.url).href
-const chat = new URL('./images/chat-bubble.jpg', import.meta.url).href
-const gitCentralPic = new URL('./images/gitcentralpic.png', import.meta.url).href
+// Import images
+import gamepic from '/src/images/gamepic.png'
+import cryptopic from '/src/images/cryptopic.png'
+import cryptocoin from '/src/images/crypto-currency-coin.png'
+import jinx from '/src/images/jinxsprite.png'
+import leagueImg from '/src/images/lolteamspic.png'
+import chat from '/src/images/chat-bubble.jpg'
+import gitCentralPic from '/src/images/gitcentralpic.png'
 
 function App() {
   const [show, setShow] = useState([

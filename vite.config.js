@@ -24,5 +24,9 @@ export default defineConfig({
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.gif', '**/*.ico'],
   optimizeDeps: {
     include: ['react', 'react-dom']
+  },
+  server: {
+    port: 3000,
+    open: true
   }
 })
