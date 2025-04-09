@@ -36,7 +36,6 @@ export default function ShowAndTell({ show }) {
                     <img className="project-image"
                         src={show.imgs[0]}
                         alt={`${show.title} screenshot 2`}
-                        style={{ maxWidth: '60%', height: 'auto' }}
                         onError={(e) => {
                             console.error("Image failed to load:", e.target.src);
                             e.target.style.display = 'none';

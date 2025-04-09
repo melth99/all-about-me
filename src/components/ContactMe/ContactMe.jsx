@@ -15,7 +15,7 @@ export default function ContactMe() {
             <h1 className="contact-title">Contact Me</h1>
             
             <div className="contact-info">
-                <p className="contact-item">Email: meleyhaddis@gmail.com</p>
+                <p className="contact-item">Email: meleyth@gmail.com</p>
                 <p className="contact-item">Phone: 301-706-9898</p>
             </div>
             

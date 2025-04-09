@@ -4,24 +4,18 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--brat-color);
-}
-
-.header-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #root {
-  max-width: 1600px;
+  min-width: 1600px;
   width: 100%;
   margin: 0 auto;
   padding: var(--spacing-xl);
   text-align: center;
   font-family: 'Arial Narrow', Arial, sans-serif;
   color: var(--text-color);
+  position: relative; /* For z-index stacking context */
 }
 
 .app-container {
@@ -29,23 +23,48 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100%;
+  background-color: var(--brat-color);
   max-width: 1600px;
   margin: 0 auto;
+  position: relative; /* For z-index stacking context */
 }
 
-.projects-section {
+/* Header section with parallax effect */
+.header-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: var(--spacing-xl);
+  height: 100vh;
+  position: fixed; /* Fixed position for parallax */
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1200px;
-  margin-top: var(--spacing-xl);
-  padding: 0 var(--spacing-xl);
-  margin-bottom: var(--spacing-xl);
+  z-index: 1; /* Lower z-index so content appears over it */
+  background-color: var(--brat-color); /* Match body background */
+}
+
+.header-section h1 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  color: black;
+  position: static;
+}
+
+/* Content sections with parallax effect */
+.bio-section {
+  width: 200vh;
+  height: 50%;
+  position: relative;
+  z-index: 2; /* Higher z-index to appear over header */
+  margin-top: 100vh; /* Push content down to start after header */
+  background-color: var(--brat-color);
+  padding: var(--spacing-xl);
 }
 
 .contact-section {
+  margin-bottom: var(--spacing-xl);
   display: flex;
   gap: var(--spacing-xl);
   align-items: center;
@@ -56,20 +75,29 @@ body {
   border: var(--border-width-lg) solid var(--secondary-color);
   box-shadow: 20px 16px 0px 0px var(--shadow-color);
   transition: all var(--transition-normal);
-  width: 90%;
-  max-width: 800px;
+  width: 90vh;
+  height: 50%;
+  position: relative;
+  z-index: 2; /* Higher z-index to appear over header */
+  background-color: var(--brat-color);
 }
 
-.contact-section:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 25px 20px 0px 0px var(--shadow-color-hover);
-  border-color: var(--primary-color);
-}
-
-.bio-section {
-  width: 90%;
-  max-width: 800px;
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--spacing-xl);
+  width: 100%;
+  max-width: 1200px;
+  margin-top: var(--spacing-xl);
+  padding: 0 var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  position: relative;
+  z-index: 2; /* Higher z-index to appear over header */
+  background-color: var(--brat-color);
 }
 
 .logo {
@@ -101,16 +129,31 @@ body {
   color: #888;
 }
 
+/* Remove the general h1 rule if .header-section h1 is the only h1 */
+/* 
 h1 {
   font-size: var(--font-size-3xl);
   margin-bottom: var(--spacing-md);
 }
+*/
 
 h2, h3 {
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-md);
 }
 
-.project-block {
-  margin-bottom: var(--spacing-xl);
+.projects-section {
+    display: flex
+;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 1200px;
+    margin-top: var(--spacing-xl);
+    padding: 0 var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
 }

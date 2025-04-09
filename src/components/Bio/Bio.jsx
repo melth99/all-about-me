@@ -5,7 +5,7 @@ what I want in the about me:
     - professional pic of me
  */
 
-import githubImage from '../../images/github.png';
+import meley from '../../images/Meley.png';
 import './Bio.css';
 
 function Bio(){
@@ -19,7 +19,7 @@ function Bio(){
             <div className="bio-content">
                 <div className="bio-image">
                     <img 
-                        src={githubImage} 
+                        src={meley} 
                         alt="Meley Haddis" 
                         className="profile-image"
                     />

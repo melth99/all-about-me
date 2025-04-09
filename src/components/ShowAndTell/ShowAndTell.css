@@ -18,9 +18,11 @@
 
 /* Add hover effect to trigger the transition */
 .show-and-tell:hover {
-    transform: translateY(-18px) scale(1.05);
+    transform: translateY(-18px);
+    transform: scale(1.05);
     box-shadow: 25px 20px 0px 0px var(--shadow-color-hover);
     border-color: var(--primary-color);
+    box-shadow: 0px 0px 0px 0px var(--shadow-color);
 }
 
 .project-title {
@@ -40,6 +42,7 @@
 }
 .bullets {
     margin-bottom: var(--spacing-md);
+    min-width: 14vh;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -60,6 +63,7 @@
 .bullet-point:hover {
     transform: scale(1.05);
     background-color: var(--background-color-hover);
+    
 }
 
 .bullet-point::before {
@@ -115,9 +119,13 @@
 }
 
 .project-image {
-    width: 100%;
     height: auto;
+    max-width: 70%;
     margin-bottom: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    border: var(--border-width-lg) solid var(--secondary-color);
+    align-self: center;
+    display: block;
 }
 
 .img-title-container {
@@ -146,9 +154,4 @@
 
 .live-link:hover {
     text-decoration: underline;
-}   
-
-.project-image {
-    border-radius: var(--border-radius-lg);
-    border: var(--border-width-lg) solid var(--secondary-color);
 }
