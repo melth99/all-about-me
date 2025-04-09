@@ -10,7 +10,7 @@
     transition: all var(--transition-normal);
     flex-basis: calc(50% - (var(--spacing-xl) / 2));
     flex-grow: 1;
-    min-width: 52vh;
+    min-width: 60vh;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;

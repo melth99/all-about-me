@@ -11,6 +11,7 @@ import jinx from './images/jinxsprite.png'
 import leagueImg from './images/lolteamspic.png'
 import chat from './images/chat-bubble.jpg'
 import gitCentralPic from './images/gitcentralpic.png'
+import ThisPortfolio from './components/ThisPortfolio/ThisPortfolio'
 
 
 
@@ -85,6 +86,7 @@ function App() {
           <ShowAndTell show={crypto} />
           <ShowAndTell show={league} />
           <ShowAndTell show={gitCentral} />
+          <ThisPortfolio />
         </div>
       </div>
 

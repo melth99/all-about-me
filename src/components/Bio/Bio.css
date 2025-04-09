@@ -1,6 +1,7 @@
 .bio-container {
   display: flex;
   flex-direction: column;
+  font-size: var(--font-size-xl);
   align-items: center;
   padding: var(--spacing-lg);
   background-color: var(--background-color);
@@ -34,7 +35,7 @@
 
 .bio-image {
   flex: 0 0 300px;
-  padding: var(--spacing-md);
+
   justify-content: top;
   display: flex;
   justify-content: center;
