@@ -21,5 +21,8 @@ export default defineConfig({
     },
   },
   publicDir: 'public',
-  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.gif', '**/*.ico']
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.gif', '**/*.ico'],
+  optimizeDeps: {
+    include: ['react', 'react-dom']
+  }
 })
