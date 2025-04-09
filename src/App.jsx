@@ -65,7 +65,7 @@ function App() {
         <h1>meley</h1>
         <p className="scroll-down"> Scroll ↓</p>
       </div>
-      <div className="content-scroll-down">
+
         <div className="bio-section">
           <Bio />
         </div>
@@ -81,7 +81,7 @@ function App() {
           <ShowAndTell show={gitCentral} />
         </div>
       </div>
-    </div>
+
   )
 }
 

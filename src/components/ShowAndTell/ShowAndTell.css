@@ -16,6 +16,7 @@
     box-sizing: border-box;
 }
 
+
 /* Add hover effect to trigger the transition */
 .show-and-tell:hover {
     transform: translateY(-18px);
