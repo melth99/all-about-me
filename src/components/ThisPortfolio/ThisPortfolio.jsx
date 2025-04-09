@@ -1,5 +1,5 @@
 // Image paths
-const github = '/all-about-me/github.png'
+const github = '/github.png'
 
 export default function ThisPortfolio() {
     return (
