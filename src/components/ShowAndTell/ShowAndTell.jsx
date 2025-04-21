@@ -50,10 +50,10 @@ export default function ShowAndTell({ show }) {
                     </a>
                 )}
                 
-                {show.links.linkedin && (
-                    <a href={show.links.linkedin} className="project-link" target="_blank" rel="noopener noreferrer">
-                        <img className="link-logo" src={linkedin} alt="LinkedIn" />
-                        <span>LinkedIn</span>
+                {show.links.live && (
+                    <a href={show.links.live} className="project-link" target="_blank" rel="noopener noreferrer">
+                        <img className="link-logo" src={show.imgs[1]} alt="Live" />
+                        <span>Live</span>
                     </a>
                 )}
             </div>

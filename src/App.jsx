@@ -34,7 +34,7 @@ function App() {
       "Implemented error handling and input validation to enhance user experience",
       "Technologies: PokeAPI, HTML, CSS, JavaScript"],
     imgs: [gamepic, "https://img.pokemondb.net/sprites/black-white/normal/pikachu-f.png"],
-    links: { github: "https://github.com/meleyhaddis/poke-wordle", live: "https://melth99.github.io/Wordle/" }
+    links: { github: "https://github.com/melth99/Wordle", live: "https://melth99.github.io/Wordle/" }
   }
 
   const crypto = {
@@ -42,7 +42,7 @@ function App() {
     description: "Cryptocurrency can be confusing and even intimidating for many. MyCryptoHaven aims to simplify the learning process by offering a cryptocurrency purchasing simulator designed to educate users. With MyCryptoHaven, users can simulate buying cryptocurrencies using any nation's currency, all without financial risk. ",
     bullets: ["Intuative UI! Allows Seamlessly navigate through an easy-to-use interface ", "Fetches Real-Time market data", "Allows users to compare coin values across any nation's currency", " Explore market trends from specific dates", "Enhances financial literacy with accessible explanations.", "Technologies: React, HTML, CSS, Node.js, Express, CoinLayerAPI, Heroku"],
     imgs: [cryptopic, cryptocoin],
-    links: { github: "https://github.com/meleyhaddis/sanrio-crypto-friends", live: "https://mycryptohaven.netlify.app/" }
+    links: { github: "https://github.com/melth99/Sanrio-Crypto-Friends-Frontend", live: "https://mycryptohaven.netlify.app/" }
   }
 
   const league = {
@@ -64,7 +64,7 @@ function App() {
     description: "A reddit-inspired full-stack forum platform where users can create, discuss, and engage with topics via a forum. It provides a centralized platform to view, update, and delete repositories, as well as to create new ones.",
     bullets: ["Unique UI/UX design", "allowed viewing priviallages to users not logged in/without JSON Web Tokens", "Full CRUD functionality on comments and posts - specific to original poster", "Encrypted user password data contributes to a secure environment", "Implemented JSON Web Tokens (JWT) for secure user authentication and authorization.", "Technologies: React, Node.js, MongoDB, Express, JSON Web Tokens"],
     imgs: [gitCentralPic, chat],
-    links: { github: "https://github.com/melth99/git-central", live: "https://git-central-app-b552da9dd887.herokuapp.com/" }
+    links: { github: "https://github.com/Michael-Anderson92/Michael-Anderson92-GitCentral-MERN-CRUD-App-Front-End/tree/main", live: "https://gitcentral.netlify.app/" }
   }
   return (
     <div className="app-container">
